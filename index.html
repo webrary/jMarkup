@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="application/javascript" src="bower_components/jselection.browser.js"></script>
+    <script type="application/javascript" src="bower_components/jselection/dist/jSelection.browser.js"></script>
     <script type="application/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <style type="text/css">
         .markup {
@@ -21,7 +21,7 @@ haha
     this is a test
 </div>
 <script type="application/javascript">
-    var xWindow = jselection.XWindow.from(document.querySelector("#body"));
+    var xWindow = jSelection.XWindow.from(document.querySelector("#body"));
     console.log(xWindow.getNodes());
     var xSelection = xWindow.select("a test", 5);
     var nodes = xSelection.getTextNodes();
