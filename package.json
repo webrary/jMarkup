@@ -1,0 +1,26 @@
+{
+  "name": "jmarkup",
+  "version": "1.0.0",
+  "description": "markup in html pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webrary/jMarkup.git"
+  },
+  "keywords": [
+    "markup",
+    "jquery"
+  ],
+  "author": "ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webrary/jMarkup/issues"
+  },
+  "homepage": "https://github.com/webrary/jMarkup#readme",
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
