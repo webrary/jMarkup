@@ -1,26 +1,82 @@
 {
   "name": "jmarkup",
-  "version": "1.0.0",
-  "description": "markup in html pages",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Example git project that is used for typescript libraries as a starter pack",
+  "main": "dist/main.js",
+  "typings": "dist/jMarkup.d.ts",
+  "jam": {
+    "main": "./dist/jMarkup.browser.js"
+  },
+  "browser": {
+    "dist/main.js": "./dist/jMarkup.browser.js"
+  },
   "scripts": {
-    "test": "test"
+    "prebuild": "npm install",
+    "build": "webpack || echo not ok",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage --no-cache",
+    "coverage:watch": "npm run coverage -- --watch",
+    "prerelease": "npm run build && npm test",
+    "release": "standard-version && npm pack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/webrary/jMarkup.git"
   },
   "keywords": [
-    "markup",
-    "jquery"
+    "example",
+    "typescript",
+    "library",
+    "starter",
+    "webpack",
+    "browserify",
+    "dts-bundle",
+    "package",
+    "tslint",
+    "jest",
+    "babel",
+    "tsloader",
+    "boilerplate",
+    "awesome-typescript-loader"
   ],
-  "author": "ming",
-  "license": "ISC",
+  "author": "Hagai Cohen",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/webrary/jMarkup/issues"
   },
   "homepage": "https://github.com/webrary/jMarkup#readme",
   "devDependencies": {
-    "bower": "^1.8.0"
+    "@types/jest": "^0.9.31",
+    "@types/node": "^6.0.38",
+    "awesome-typescript-loader": "^2.2.1",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "browserify": "^13.1.0",
+    "delete-empty": "^0.1.3",
+    "dts-bundle": "^0.5.0",
+    "jest": "^15.1.1",
+    "standard-version": "^2.4.0",
+    "tslint": "^3.15.1",
+    "tslint-loader": "^2.1.5",
+    "typescript": "2.0.0",
+    "typescript-babel-jest": "^0.1.2",
+    "webpack": "2.1.0-beta.22",
+    "webpack-node-externals": "^1.4.3"
+  },
+  "dependencies": {
+    "jselection": "^0.1.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "node_modules/typescript-babel-jest",
+    "testEnvironment": "node",
+    "testRegex": ".*\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
   }
 }

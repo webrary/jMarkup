@@ -1,26 +1,20 @@
 {
-  "name": "jMarkup",
-  "private": true,
-  "version": "0.0.0",
-  "dependencies": {
-    "jselection": "*"
-  },
-  "devDependencies": {
-    "jquery": "^3.1.1"
-  },
-  "homepage": "https://github.com/webrary/jMarkup",
+  "name": "jmarkup",
+  "description": "extended selection",
+  "main": "index.js",
   "authors": [
-    "ming <upzort@gmail.com>"
+    "ming"
   ],
-  "description": "web library",
-  "license": "MIT",
+  "license": "ISC",
+  "homepage": "https://github.com/webrary/jMarkup",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "app/bower_components",
-    "app/libs",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jselection": "*"
+  }
 }
